@@ -241,7 +241,7 @@ xwrite(int fd, const char *s, size_t len)
 	while (len > 0) {
 		r = write(fd, s, len);
 		if (r < 0)
-			return r;
+                  return r;
 		len -= r;
 		s += r;
 	}
@@ -300,7 +300,7 @@ utf8decode(const char *c, Rune *u, size_t clen)
 	*u = udecoded;
 	utf8validate(u, len);
 
-	return len;
+        return len;
 }
 
 Rune
